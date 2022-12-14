@@ -1,0 +1,172 @@
+// Use CodeBlock sir, thankyou!
+
+//Target: Sales of Baratendo --> they sale liquor
+
+#include<stdio.h>
+#include<conio.h>
+
+     int order, whiskCode, vodCode, rumCode, teqCode, total, totalAmt, cash, change;
+     char addOn;
+
+void main(void){
+
+   do {
+        system("cls");
+    printf("\nWELCOME TO BARATENDO\n");
+    printf("\n=====================");
+    printf("\nBARATENDO LIQUOR MENU");
+    printf("\n=====================\n");
+    printf("\n[1] WHISKEY");
+    printf("\n[2] VODKA");
+    printf("\n[3] RUM");
+    printf("\n[4] TEQUILA");
+    printf("\n\nWhat's your order?");
+    printf("\nPlease, Input Code Number: ");
+    scanf("%d",&order);
+
+    if(order == 1){
+        system("cls");
+        printf("\n=============\n");
+        printf("WHISKEY BRAND");
+        printf("\n=============\n\n");
+        printf("[1] Ballantine\t Php 1,860.00"); // for nested if statement
+        printf("\n[2] Crown Royal\t Php 1,370.00"); // for nested if statement
+        printf("\n\nPlease, Input Code Number: ");
+        scanf("%d",&whiskCode);
+
+          if(whiskCode == 1){
+                int price = 1860;
+                int qty;
+            printf("\nBallantine");
+            printf("\nPrice: Php 1,860.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+          else{
+                int price = 1370;
+                int qty;
+            printf("\nCrown Royal");
+            printf("\nPrice: Php 1,370.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+
+        }
+
+    else if(order > 1 && order == 2){
+        system("cls");
+        printf("\n===========\n");
+        printf("VODKA BRAND");
+        printf("\n===========\n\n");
+        printf("[1] Absolut\t Php 2,650.00"); // for nested if statement
+        printf("\n[2] Smirnoff\t Php 1,120.00"); // for nested if statement
+        printf("\n\nPlease, Input Code Number: ");
+        scanf("%d",&vodCode);
+
+          if(vodCode == 1){
+                int price = 2650;
+                int qty;
+            printf("\nAbsolut");
+            printf("\nPrice: Php 2,650.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+          else{
+                int price = 1120;
+                int qty;
+            printf("\nSmirnoff");
+            printf("\nPrice: Php 1,120.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+
+        }
+
+    else if(order > 2 && order == 3){
+        system("cls");
+        printf("\n=========\n");
+        printf("RUM BRAND");
+        printf("\n=========\n\n");
+        printf("[1] Bacardi\t\t Php 2,335.00"); // for nested if statement
+        printf("\n[2] Tanduay Gold\t Php 1,760.00"); // for nested if statement
+        printf("\n\nPlease, Input Code Number: ");
+        scanf("%d",&rumCode);
+
+          if(rumCode == 1){
+                int price = 2335;
+                int qty;
+            printf("\nBacardi");
+            printf("\nPrice: Php 2,335.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+          else{
+                int price = 1760;
+                int qty;
+            printf("\nTanduay Gold");
+            printf("\nPrice: Php 1,760.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                  total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+
+        }
+
+    else{
+        system("cls");
+        printf("\n=============\n");
+        printf("TEQUILA BRAND");
+        printf("\n=============\n\n");
+        printf("[1] Patrón\t Php 3,792.00"); // for nested if statement
+        printf("\n[2] Mezquila\t Php 2,989.00"); // for nested if statement
+        printf("\n\nPlease, Input Code Number: ");
+        scanf("%d",&teqCode);
+
+          if(teqCode == 1){
+                int price = 3792;
+                int qty;
+            printf("\nPatrón");
+            printf("\nPrice: Php 3,792.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+          else{
+                int price = 2989;
+                int qty;
+            printf("\nMezquila");
+            printf("\nPrice: Php 2,989.00");
+            printf("\nQTY: ");
+            scanf("%d",&qty);
+                 total = price * qty;
+            printf("\nTotal: %d.00",total);
+          }
+
+        }
+        totalAmt = totalAmt + total;
+        printf("\nTotal Amount: Php %d.00",totalAmt);
+        printf("\n\nWant to add another order? (y/n): ");
+        addOn = getch();
+    }while(addOn == 'y' || addOn == 'Y');
+
+     printf("\n\nCash: ");
+     scanf("%d",&cash);
+
+     change = cash - totalAmt;
+     printf("Change: Php %d.00",change);
+     printf("\nTHANK YOU");
+    }
+
+
